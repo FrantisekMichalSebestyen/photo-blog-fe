@@ -3,17 +3,31 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        fontWeightAnimation: {
-          "0%": { "font-variation-settings": '"wght" 400' },
-          "100%": { "font-variation-settings": '"wght" 600' },
+        fontWeightAnimation2: {
+          "0%": { 
+            "opacity": 0,
+            "font-variation-settings": '"wght" 500, "wdth" 80.5' },
+          "100%": { 
+            "opacity": 100,
+            "font-variation-settings": '"wght" 800, "wdth" 80.5' },
+        },
+        fontWeightAnimation1: {
+          "0%": { 
+            "opacity": 0,
+            "font-variation-settings": '"wght" 800, "wdth" 80.5' },
+          "100%": { 
+            "opacity": 100,
+            "font-variation-settings": '"wght" 500, "wdth" 80.5' },
         },
       },
       animation: {
-        "font-weight": "fontWeightAnimation 3s ease-in-out infinite alternate",
+        "font-weight1": "fontWeightAnimation1 ease-out 3s",
+        "font-weight2": "fontWeightAnimation2 ease-out 3s",
       },
     },
     fontFamily: {
-      variable: ["playfair", "sans-serif"],
+      body: ["playfair", "serif"],
+      display: ["inter", "sans-serif"]
     },
   },
   content: [
